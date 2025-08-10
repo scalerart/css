@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo_Class</title>
+
+    <style>
+        h1 {
+            color: goldenrod;
+        }
+
+        h1:hover {
+            color: indianred;
+            font-size: 30px;
+        }
+
+        h1::before {
+            content: 'Love You';
+            color: lightsalmon;
+        }
+
+        h1::after {
+            content: 'Love You';
+            color: lightsalmon;
+        }
+
+
+        input:focus {
+            font-size: 20px;
+            font-weight: 700;
+            color: blue;
+        }
+
+        li:first-child {
+            background-color: brown;
+            padding: 5px 10px;
+            color: white;
+        }
+
+        li:nth-child(2n+1) {
+            background-color: chocolate;
+            color: white;
+            font-size: 30px;
+        }
+
+        a:visited {
+            color: blueviolet;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Pseudo Class_1</h1>
+    <h1>Pseudo Class_2</h1>
+    <h1>Pseudo Class_3</h1>
+    <h1>Pseudo Class_4</h1>
+    <h1>Pseudo Class_5</h1>
+
+    <input type="text" name="email"><br>
+    <input type="password" name="password">
+
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        <li>Four</li>
+        <li>Five</li>
+        <li>Six</li>
+        <li>Seven</li>
+    </ul>
+</body>
+</html>

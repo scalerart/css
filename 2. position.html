@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        .container {
+            background-color: lightblue;
+            position: relative;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #first {
+            background-color: forestgreen;
+        }
+        #second {
+            background-color: greenyellow;
+            position: relative;
+            left: 100px;
+            top: 0;
+        }
+        #third {
+            background-color: hotpink;
+            position: absolute;
+            top: 0;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>Learning and climbing Position</h2>
+    </section>
+
+    <section class="container">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smooth CSS Animations</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    padding: 20px;
+    color: #333;
+    display: grid;
+    gap: 30px;
+}
+
+/* ===== 1. Smooth Fade In ===== */
+@keyframes smoothFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-in {
+    animation: smoothFade 1.2s ease-out forwards;
+}
+
+/* ===== 2. Gentle Slide In ===== */
+@keyframes gentleSlide {
+    from { transform: translateX(-40px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+.slide-in {
+    animation: gentleSlide 1.5s ease-out forwards;
+}
+
+/* ===== 3. Soft Zoom ===== */
+@keyframes softZoom {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.zoom {
+    animation: softZoom 1.3s ease-out forwards;
+}
+
+/* ===== 4. Glow Effect ===== */
+@keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(0,150,255,0.2); }
+    50% { box-shadow: 0 0 20px rgba(0,150,255,0.4); }
+    100% { box-shadow: 0 0 5px rgba(0,150,255,0.2); }
+}
+.glow {
+    animation: glow 3s infinite ease-in-out;
+}
+
+/* ===== 5. Smooth Background Gradient ===== */
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.gradient {
+    background: linear-gradient(120deg, #6dd5fa, #ffffff, #2980b9);
+    background-size: 300% 300%;
+    animation: bgMove 8s ease infinite;
+}
+
+/* ===== 6. Soft Button Hover ===== */
+.soft-btn {
+    padding: 12px 25px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.soft-btn:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== 7. Floating Effect ===== */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ===== 8. Smooth Border Animation ===== */
+@keyframes borderPulse {
+    0% { border-color: #3498db; }
+    50% { border-color: #9b59b6; }
+    100% { border-color: #3498db; }
+}
+.border-animate {
+    border: 3px solid #3498db;
+    padding: 15px;
+    border-radius: 10px;
+    animation: borderPulse 5s infinite ease-in-out;
+}
+
+/* ===== 9. Fade-in Text with Delay ===== */
+.delay-fade {
+    opacity: 0;
+    animation: smoothFade 1.5s ease forwards;
+    animation-delay: 1s;
+}
+
+/* ===== 10. Card Hover Lift ===== */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+</style>
+</head>
+<body>
+
+<h1 class="fade-in">Smooth CSS Animations</h1>
+
+<div class="card slide-in">Gentle Slide In Card</div>
+
+<div class="card zoom">Soft Zoom Card</div>
+
+<div class="card glow">Glowing Card</div>
+
+<div class="card gradient">Animated Gradient Background</div>
+
+<button class="soft-btn">Smooth Hover Button</button>
+
+<div class="card float">Floating Effect</div>
+
+<div class="border-animate">Border Color Animation</div>
+
+<p class="delay-fade">This text fades in with a delay.</p>
+
+<div class="card">Hover me for Lift Effect</div>
+
+</body>
+</html>
