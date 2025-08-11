@@ -3,47 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Position</title>
+    <title>position</title>
 
     <style>
         .container {
-            background-color: lightblue;
-            position: relative;
+            display: flex;
         }
-
-        div {
-            width: 100px;
-            height: 100px;
-        }
-
-        #first {
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 5px;
             background-color: forestgreen;
-        }
-        #second {
-            background-color: greenyellow;
-            position: relative;
-            left: 100px;
-            top: 0;
-        }
-        #third {
-            background-color: hotpink;
-            position: absolute;
-            top: 0;
-            left: 200px;
         }
     </style>
 </head>
 <body>
-
-    <section>
-        <h2>Learning and climbing Position</h2>
-    </section>
-
+    <h1>Position</h1>
+    <h2>More Position</h2>
     <section class="container">
-        <div id="first"></div>
-        <div id="second"></div>
-        <div id="third"></div>
+        <div class="box box-1">
+            <h3>box-1</h3>
+        </div>
+        <div class="box box-2">
+            <h3>box-2</h3>
+        </div>
+        <div class="box box-3">
+            <h3>box-3</h3>
+        </div>
+        <div class="box box-4">
+            <h3>box-4</h3>
+        </div>
     </section>
     
 </body>
 </html>
+
+<!-- 
+CSS Position কী?
+CSS এর position প্রোপার্টি দিয়ে আমরা ঠিক করি কোনো element ওয়েবপেজে কোথায় বসবে এবং কিভাবে তার অবস্থান নিয়ন্ত্রণ হবে।
+এটা মূলত বলে দেয় element কে ব্রাউজার কিভাবে সাজাবে।
+
+Position এর ধরন (5 টি)
+1. static (ডিফল্ট)
+    * ডিফল্ট অবস্থান, সব element normal flow অনুযায়ী বসে।
+    * top, left, right, bottom প্রোপার্টি কাজ করে না।
+.box {
+  position: static;
+}
+
+2. relative (আপনার বর্তমান অবস্থান থেকে সরানো)
+    * element normal flow এ থাকে, কিন্তু top/left/right/bottom দিয়ে সামান্য সরানো যায়।
+    * তার জায়গা (space) আগের মতই থাকে।
+.box {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+3. absolute (পুরোপুরি নির্দিষ্ট অবস্থান)
+    * element কে normal flow থেকে সরিয়ে ফেলে।
+    * position nearest positioned parent (যার position static ছাড়া অন্য কিছু) এর সাথে  সম্পর্কিত হয়।
+.box {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+4. fixed (স্ক্রল করলেও স্থির)
+    * element সবসময় ব্রাউজারের viewport অনুযায়ী fixed থাকে।
+    * স্ক্রল করলেও অবস্থান পরিবর্তন হয় না।
+.box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+5. sticky (স্ক্রল করলে আটকে যায়)
+    * element normal flow তে থাকে, কিন্তু নির্দিষ্ট scroll position এ পৌঁছালে fixed এর মতো আচরণ করে।
+.box {
+  position: sticky;
+  top: 0;
+}
+-->
