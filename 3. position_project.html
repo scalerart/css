@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position_Project</title>
+
+    <style>
+        .container {
+            width: 1320px;
+            margin: 0 auto;
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+
+        .photo-frame {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px 20px;
+            justify-content: space-around;
+        }
+
+        .photo-album {
+            width: 300px;
+            height: 350px;
+            border: 10px solid orange;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .photo-album .photo img {
+            width: 100%;
+            background-color: orange;
+        }
+
+         .photo-album:hover .photo img {
+            transform: scale(1.2);
+            transition: transform 2s;
+         }
+
+        .photo-detail {
+            position: absolute;
+            padding: 20px 20px;
+            top: 0;
+            color: white;
+            display: none;
+        }
+        .photo-album:hover .photo-detail{
+            display: block;
+            width: 260px;
+            height: 310px;
+            background-color: rgba(255, 166, 0, 0.8);
+            transition: all linear 0.4s;
+        }
+
+        .photo-detail h3 {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background-color: rgba(255, 166, 0, 0.5);
+            padding: 5px 2px;
+            border-radius: 5px;
+        }
+
+        .photo-detail p {
+            text-align: justify;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <h1>My Photo Album</h1>
+        <div class="photo-frame">
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+
+            <div class="photo-album">
+            <div class="photo">
+                <img src="https://images.pexels.com/photos/1661179/pexels-photo-1661179.jpeg?cs=srgb&dl=pexels-roshan-kamath-793618-1661179.jpg&fm=jpg" alt="">
+            </div>
+            <div class="photo-detail">
+                <h3>Hanging parrots</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus eveniet cum iusto quaerat, optio molestias eaque consequatur illo inventore doloribus ut officiis dolores corporis vel maxime nisi aliquid similique quis facilis ducimus mollitia cupiditate? Fuga velit quo inventore rem illum repellendus, mollitia iusto, pariatur soluta suscipit, dolore provident eveniet obcaecati?</p>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
