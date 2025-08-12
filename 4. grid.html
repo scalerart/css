@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 250px 1fr 1fr;
+            grid-gap: 20px 18px;
+        }
+
+        .article {
+            font-size: 18px;
+            text-transform: uppercase;
+            background-color: rgb(236, 213, 184);
+            place-content: center;
+            place-items: center;
+        }
+
+        .article-1 {
+            grid-row: 1/span 7;
+        }
+
+        .article-2 {
+            grid-column: 2/span 2;
+        }
+    </style>
+
+</head>
+<body>
+    <section class="container">
+        <article class="article article-1">
+            <h3>Article-1</h3>
+        </article>
+        <article class="article article-2">
+            <h3>Article-2</h3>
+        </article>
+        <article class="article article-3">
+            <h3>Article-3</h3>
+        </article>
+        <article class="article article-4">
+            <h3>Article-4</h3>
+        </article>
+        <article class="article article-5">
+            <h3>Article-5</h3>
+        </article>
+        <article class="article article-6">
+            <h3>Article-6</h3>
+        </article>
+        <article class="article article-7">
+            <h3>Article-7</h3>
+        </article>
+        <article class="article article-8">
+            <h3>Article-8</h3>
+        </article>
+        <article class="article article-9">
+            <h3>Article-9</h3>
+        </article>
+        <article class="article article-10">
+            <h3>Article-10</h3>
+        </article>
+        <article class="article article-11">
+            <h3>Article-11</h3>
+        </article>
+        <article class="article article-12">
+            <h3>Article-12</h3>
+        </article>
+        <article class="article article-13">
+            <h3>Article-13</h3>
+        </article>
+        <article class="article article-14">
+            <h3>Article-14</h3>
+        </article>
+    </section>
+</body>
+</html>
+
+<!--
+1.  CSS Grid কি?
+    CSS Grid Layout হলো CSS-এর একটি শক্তিশালী লেআউট সিস্টেম যা ওয়েবপেজে 2D লেআউট (অর্থাৎ Row এবং Column উভয়) তৈরি করতে ব্যবহার হয়।
+    এটি HTML এলিমেন্টগুলোকে একটি গ্রিডের মধ্যে সাজাতে সাহায্য করে, যেখানে প্রতিটি এলিমেন্ট নির্দিষ্ট সেল, রো, বা কলাম দখল করতে পারে।
+    * সংক্ষেপে:
+        * Flexbox একদিকে (row বা column) ভালো।
+        * Grid দুইদিকে (row + column) একসাথে নিয়ন্ত্রণে দুর্দান্ত।
+
+2.  CSS Grid কিভাবে কাজ করে?
+    1. Parent element কে Grid Container বানানো হয়।
+    2. Child elements গুলো Grid Items হয়।
+    3. আমরা Container-এ রো ও কলামের সংখ্যা, সাইজ, gap ইত্যাদি সেট করি।
+    4. Grid Items গুলোকে নির্দিষ্ট স্থানে বসাতে পারি।
+
+    বেসিক সিনট্যাক্স:
+        .container {
+        display: grid; / গ্রিড চালু
+        grid-template-columns: 200px 1fr 2fr; / কলাম
+        grid-template-rows: 100px auto;       / রো
+        gap: 10px; / আইটেমের মধ্যে ফাঁকা
+        }
+
+3.  CSS Grid Cheat Sheet
+    A. Container Properties (Parent Element)
+    | Property              | Value Example                                 | কাজ
+    | --------------------- | --------------------------------------------- | --------------------------------------
+    | display               | grid / inline-grid                            | Grid চালু করা
+    | grid-template-columns | 200px 1fr 2fr / repeat(3, 1fr)                | কলামের সংখ্যা ও সাইজ নির্ধারণ
+    | grid-template-rows    | 100px auto 50px / repeat(2, auto)             | রো এর সংখ্যা ও সাইজ নির্ধারণ
+    | grid-template-areas   | "header header" "sidebar content"             | নাম দিয়ে লেআউট তৈরি
+    | gap                   | 10px / 10px 20px                              | রো ও কলামের ফাঁকা (short-hand)
+    | row-gap               | 15px                                          | শুধু রো ফাঁকা
+    | column-gap            | 20px                                          | শুধু কলাম ফাঁকা
+    | justify-items         | start / center / end / stretch                | কলাম দিকের আইটেম এলাইনমেন্ট
+    | align-items           | start / center / end / stretch                | রো দিকের আইটেম এলাইনমেন্ট
+    | place-items           | center / stretch                              | একসাথে justify-items + align-items
+    | justify-content       | start / center / space-between / space-around | পুরো গ্রিডকে কলাম দিকে সরানো
+    | align-content         | start / center / space-between / space-around | পুরো গ্রিডকে রো দিকে সরানো
+    | place-content         | center / space-between                        | একসাথে justify-content + align-content
+    | grid-auto-rows        | 100px / minmax(50px, auto)                    | অটো তৈরি হওয়া রো এর সাইজ
+    | grid-auto-columns     | 200px                                         | অটো তৈরি হওয়া কলামের সাইজ
+    | grid-auto-flow        | row / column / row dense                      | আইটেম বসানোর ক্রম নির্ধারণ
+
+    B. Item Properties (Child Element)
+    | Property              | Value Example                                 | কাজ
+    | -----------------     | ----------------------------------------------| ------------------------------------
+    | grid-column-start     | 1                                             | কোন কলাম থেকে শুরু হবে
+    | grid-column-end       | 3                                             | কোন কলামে শেষ হবে
+    | grid-row-start        | 2                                             | কোন রো থেকে শুরু হবে
+    | grid-row-end          | 4                                             | কোন রোতে শেষ হবে
+    | grid-column           | 1 / 3                                         | শুরু ও শেষ একসাথে (short-hand)
+    | grid-row              | 2 / 4                                         | শুরু ও শেষ একসাথে (short-hand)
+    | grid-area             | header / 2 / 1 / 4 / 3                        | নাম বা সংখ্যা দিয়ে নির্দিষ্ট অবস্থান
+    | justify-self          | start / center / end / stretch                | কলাম দিকের এলাইনমেন্ট
+    | align-self            | start / center / end / stretch                | রো দিকের এলাইনমেন্ট
+    | place-self            | center / stretch                              | একসাথে justify-self + align-self
+
+4.  ছোট্ট গল্প দিয়ে বোঝা
+    ধরা যাক তুমি একটি টেবিল সাজাচ্ছো:
+    * টেবিলের বড় কাঠামো = Grid Container
+    * টেবিলের ঘরগুলো (সেল) = Grid Items
+    * তুমি ঠিক করছো কোন ঘর কত চওড়া বা লম্বা হবে, কোন খাবার কোন ঘরে থাকবে।
+    * CSS Grid ঠিক এমনভাবেই ওয়েবপেজ সাজায়।
+-->
