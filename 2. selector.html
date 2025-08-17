@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+
+    <style>
+        body {
+            margin: 0 auto;
+        }
+        #container {
+            max-width: 860px;
+            max-height: 600px;
+            margin: 0 auto;
+            background-color: antiquewhite;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(253, 213, 165);
+            text-align: center;
+            align-content: center; 
+            border-radius: 20px;  
+            box-shadow: 0px 0px 8px 5px solid rgba(0, 0, 0, 0.397);
+        }
+        p {
+            font-size: 30px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box box-1">
+        <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-2">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-3">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-4">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-5">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-6">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-7">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-8">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-9">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-10">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-11">
+            <p>Learn CSS Selector</p>
+        </div>
+        <div class="box box-12">
+            <p>Learn CSS Selector</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 
+📘 CSS Learning – Day 2
+🎯 আজকের টপিক: CSS Syntax & Selectors
+1.  CSS Syntax (লেখার ধরন)
+    CSS লিখতে হলে তিনটি জিনিস লাগে –
+    1. selector → কোন এলিমেন্টে স্টাইল হবে (যেমন: p, h1, .class, #id)
+    2. property → কোন জিনিস পরিবর্তন করতে চাই (যেমন: color, font-size)
+    3. value → তার মান (যেমন: red, 20px)
+
+2.  CSS Selectors (কাকে বাছাই করা হবে)
+    CSS-এ সিলেক্টর খুব গুরুত্বপূর্ণ।
+| Selector  | Example     | কাজ কী করে
+| --------- | ----------- | -----------------------
+| Element   | p { }       | সব <p> ট্যাগে স্টাইল দেয়
+| Class     | .red { }    | যাদের class="red" আছে তাদের স্টাইল দেয়
+| ID        | #header { } | নির্দিষ্ট id="header" এলিমেন্টে স্টাইল দেয়
+| Group     | h1, h2 { }  | একসাথে h1 আর h2 ট্যাগে স্টাইল দেয়
+| Universal | * { }       | পুরো ওয়েবসাইটের সব এলিমেন্টে স্টাইল দেয়
+
+-->
