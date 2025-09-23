@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 200px;
+            border: 5px solid rgb(0, 255, 255);
+            padding: 25px;
+            overflow: auto;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 200px;
+            margin-top: 25px;
+            border: 4px solid palegreen;
+            padding: 25px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio repellendus sequi quia natus consectetur nostrum autem quae harum voluptate accusantium laborum, maxime sint numquam totam tenetur. Amet, doloribus voluptatibus officiis debitis a, doloremque iure quas quam quod tenetur, provident sint velit maxime quisquam deleniti. Ipsam, et labore sapiente, architecto velit temporibus aspernatur explicabo dolore totam accusamus rerum natus iusto dolorum ipsa nam sequi quidem at reiciendis a repudiandae laudantium voluptates, ab beatae. Nostrum quod esse voluptas molestiae cupiditate animi deserunt consequuntur reiciendis, velit eius exercitationem labore in iste a soluta. Itaque, ad accusantium dolorum ex, explicabo incidunt aliquam ullam nobis vero deleniti alias neque possimus voluptas libero, quis cum dicta totam cumque et. Ab error perferendis officiis beatae qui eaque, consectetur dicta itaque velit aliquam exercitationem corporis reiciendis vero. Sit vel nostrum quibusdam quidem veritatis quo, hic minus nihil assumenda similique. Dignissimos officia soluta fuga reiciendis, eveniet cupiditate excepturi architecto?</p>
+    </div>
+    <div class="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magni hic harum excepturi rem dicta, porro illo ullam amet distinctio temporibus magnam dolor pariatur expedita cum consequatur odit, velit dignissimos accusantium quasi laboriosam? Assumenda ratione similique optio tempore voluptates, facere laborum neque expedita. Totam accusamus aspernatur qui sint laborum. Harum expedita tempore eveniet inventore suscipit repudiandae soluta libero velit voluptatem aliquam quia maiores facilis dolorum error molestiae qui porro, sunt et quos exercitationem corrupti vel assumenda vitae. Itaque, nostrum distinctio?</p>
+    </div>
+    
+</body>
+</html>
+<!-- 
+🔹  Overflow কী?
+    যখন কোনো কনটেন্ট (লেখা, ছবি, ইলিমেন্ট ইত্যাদি) তার কন্টেইনার বা বক্সের (যেমন: div) আকারের বাইরে চলে যায়, তখন কনটেন্টটা কেমন দেখাবে সেটা নিয়ন্ত্রণ করতে CSS overflow প্রোপার্টি ব্যবহার করা হয়।
+
+🔹  overflow এর মানসমূহ
+1.  visible (default)
+    👉 কনটেন্ট যদি বক্সের বাইরে যায়, তাহলে সেটা বাইরে বের হয়ে দৃশ্যমান হবে।
+    .box {
+    width: 200px;
+    height: 100px;
+    overflow: visible;
+    }
+
+2.  hidden
+    👉 কনটেন্ট যদি বাইরে চলে যায় তবে তা কেটে ফেলা হবে, আর বাইরে কিছুই দেখা যাবে না।
+    .box {
+    width: 200px;
+    height: 100px;
+    overflow: hidden;
+    }
+
+3.  scroll
+    👉 সবসময় স্ক্রলবার (scrollbar) দেখাবে, কনটেন্ট ছোট হলেও।
+    👉 ব্যবহারকারী স্ক্রল করে বাকি কনটেন্ট দেখতে পারবে।
+    .box {
+    width: 200px;
+    height: 100px;
+    overflow: scroll;
+    }
+
+4.  auto
+    👉 কনটেন্ট যদি বক্সের ভেতরে ফিট হয়ে যায় → কোনো স্ক্রলবার আসবে না।
+    👉 কনটেন্ট যদি বাইরে যায় → স্বয়ংক্রিয়ভাবে স্ক্রলবার আসবে।
+    .box {
+    width: 200px;
+    height: 100px;
+    overflow: auto;
+    }
+
+🔹  অতিরিক্ত প্রোপার্টি
+    1.  overflow-x
+    👉  শুধুমাত্র অনুভূমিক (x-axis) কনটেন্ট নিয়ন্ত্রণ করে।
+        overflow-x: hidden;  /* কেবল ডানে-বামে লুকাবে */
+
+    2.  overflow-y
+        👉 শুধুমাত্র উল্লম্ব (y-axis) কনটেন্ট নিয়ন্ত্রণ করে।
+        overflow-y: scroll;  /* শুধু উপরে-নিচে স্ক্রলবার */    
+    
+🔹  ভিজ্যুয়াল সারাংশ (সহজে মনে রাখার জন্য)
+| মান (Value) | কাজ কী করে
+| ----------- | -------------------------
+| visible     | কনটেন্ট বাইরে বের হয়ে যাবে
+| hidden      | কেটে ফেলে, বাইরে কিছু দেখাবে না
+| scroll      | সবসময় স্ক্রলবার দেখাবে
+| auto        | প্রয়োজনে স্ক্রলবার দেখাবে
+| overflow-x  | অনুভূমিক দিক নিয়ন্ত্রণ করবে
+| overflow-y  | উল্লম্ব দিক নিয়ন্ত্রণ করবে
+-->
