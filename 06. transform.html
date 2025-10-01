@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid rebeccapurple;
+        }
+
+        .outer {
+            background-color: lightgray;
+        }
+        .inner {
+            display: grid;
+            place-items: center;
+            background-color: indianred;
+            transform: scale(.75);
+        }
+    </style>
+</head>
+<body>
+    <h1>Transform</h1>
+    <div class="box outer">
+        <div class="box inner">box-1</div>
+    </div>
+    <div class="box outer">
+        <div class="box inner">box-2</div>
+    </div>
+    <div class="box outer">
+        <div class="box inner">box-3</div>
+    </div>
+    
+</body>
+</html>
+
+<!-- 
+🔹  CSS Transform
+    Transform হলো CSS এর একটি property, যেটা দিয়ে HTML elements-এর আকার, অবস্থান এবং ঘূর্ণন (rotate) পরিবর্তন করা যায়। অর্থাৎ, transform ব্যবহার করে তুমি কোনো element কে ঘোরানো, বড় করা, ছোট করা, কাত করা বা সরানো করতে পারবে।
+
+    🔑  CSS Transform Property Syntax:
+        selector {
+        transform: function(value);
+        }
+    👉 এখানে function(value) বলতে বোঝায় element-এর উপর কী ধরনের পরিবর্তন (transform) প্রয়োগ করতে চাই।
+🌀  Transform এর প্রধান Functions:
+    1.  translate() → Element কে সরানো
+        transform: translate(50px, 100px);
+    ➡️  X-axis এ 50px এবং Y-axis এ 100px সরানো হবে।
+        * translateX(50px) → শুধু X-axis এ সরাবে
+        * translateY(100px) → শুধু Y-axis এ সরাবে
+
+    2.  rotate() → Element কে ঘোরানো
+        transform: rotate(45deg);
+    ➡️  Element 45 ডিগ্রি ঘুরে যাবে।
+        * Positive মানে clockwise ঘোরে।
+        * Negative মানে anti-clockwise ঘোরে।
+
+    3.  scale() → Element কে বড় বা ছোট করা
+        transform: scale(1.5, 2);
+    ➡️  X-axis এ 1.5 গুণ, Y-axis এ 2 গুণ হবে।
+        * scale(2) → Element দ্বিগুণ হবে।
+        * scale(0.5) → অর্ধেক ছোট হবে।
+
+    4.  skew() → Element কে কাত করা
+        transform: skew(30deg, 20deg);
+    ➡️ X-axis এ 30°, Y-axis এ 20° কাত হবে।
+
+    5.  matrix() → Advanced transform
+        👉 matrix() হলো translate, rotate, scale, skew সব একসাথে করার জন্য একটি shorthand।
+        transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
+
+🎯  একাধিক Transform একসাথে ব্যবহার
+    একাধিক transform প্রয়োগ করা যায় একসাথে:
+    transform: translate(50px, 50px) rotate(45deg) scale(1.2);
+    ➡️  এখানে element প্রথমে সরবে → তারপর ঘুরবে → তারপর বড় হবে।
+
+⚡  Bonus: 2D vs 3D Transform
+    *   transform দিয়ে 2D (ঘোরানো, কাত করা, সরানো) এবং 3D (z-axis এ কাজ করা) দুটোই করা যায়।
+    *   3D উদাহরণ:
+        transform: rotateX(60deg);
+        transform: rotateY(120deg);
+        transform: rotateZ(45deg);
+
+✅  সংক্ষেপে মনে রাখো:
+    1.  translate = সরানো
+    2.  rotate = ঘোরানো
+    3.  scale = বড়/ছোট করা
+    3.  skew = কাত করা
+    4.  matrix = সব একসাথে        
+-->
